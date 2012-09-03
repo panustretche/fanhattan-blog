@@ -1,0 +1,21 @@
+	<% posts.each do |post| %>
+	<div class="post">
+		<p class="date"><%= post[:created_at].strftime("%b") %><b><%= post[:created_at].strftime("%d") %></b></p>
+    <h2 class="title"><a href="<%= post.url %>"><%= post[:title] %></a> | <span><%= post.comments.count %></span> comments</h2>
+		<div class="entry">
+      <p><%= post.body %></p>
+		</div>
+	</div>
+  <% end %>
+
+  <% if flash[:error] %>
+    <p class="error_msg"><%= flash[:error] %><p>
+  <% end %>
+
+  <div class="post_nav">
+    <% if admin? %>
+      <a href="/posts/new">Create new post</a> | <a href="/logout">Logout</a>
+    <% else %>
+      <p>Please <a href="/auth">log in</a> to create new post</p>
+    <% end %>
+  </div>

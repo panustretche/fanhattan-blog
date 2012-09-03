@@ -1,0 +1,53 @@
+<script type="text/javascript">
+$(function() {
+  var comment_body = new LiveValidation('body');
+  comment_body.add(Validate.Presence);
+});
+</script>
+<% if flash[:error] %><p class="error_msg"><%= flash[:error] %><p><% end %>
+<% if flash[:notice] %><p class="notice_msg"><%= flash[:notice] %><p><% end %>
+
+<div class="post_content">
+  <h2 class="title"><%= post.title %></h2> 	
+  <p class="meta"><%= post.created_at.strftime("%b %d, %Y") %> | <% if admin? %><a href="<%= post.url %>edit">edit</a><% end %>
+</p>
+	<div class="entry">
+    <%= post.body %> 
+  </div>
+  <% if post.comments.blank? %>
+    <p>This post has no comment.</p>
+  <% else %>
+    <h3>Comments</h3>
+    <ul class="comment_list">
+    <% post.comments.each do |c| %>
+      <li>
+        <p class="commenter"><%= c.user %> said:</p>
+        <p><%= c.body %></p>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+  <h4>Post new comment</h4>
+  <form action="<%= post.url %>comment" method="post" name="edit">
+    <div class="comment">
+      <% if admin? %>
+        <p><label>Name : </label> admin</p>
+        <input type="hidden" name="user" value="admin" id="user"/>
+      <% else %>
+        <p><label>Name : </label></p>
+        <input type="text" name="user" value="" id="user" />
+        <script type="text/javascript">
+          $(function() {
+            var comment_user = new LiveValidation('user');
+            comment_user.add(Validate.Presence);
+          });
+        </script>
+
+      <% end %>
+        <p><label>Comment : </label></p>
+        <textarea name="body" id="body"></textarea>
+        <p><input type="submit" value="Post comment" /></p>
+    </div>
+  </form>
+  <p class="list_all"><a href="/">List all posts</a></p>
+</div>

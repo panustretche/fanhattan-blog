@@ -1,0 +1,24 @@
+THE RUBY TEST
+Prepared exclusively for Fanhattan
+
+TECHNOLOGY
+Sinatra + MongoDB + RSpec
+
+HOW TO RUN APPLICATION
+>> ruby main.rb
+open your browser and go to http://localhost:4567
+
+REQUIRED GEMS
+rubygems
+rack
+sinatra
+sinatra-flash
+mongo_mapper
+encrypted_cookie
+rspec
+factory_girl
+
+ADMIN PASSWORD
+qwert123
+
+

@@ -1,0 +1,22 @@
+<script type="text/javascript">
+$(function() {
+  var post_title = new LiveValidation('title');
+  var post_body = new LiveValidation('body');
+  post_title.add(Validate.Presence);
+  post_body.add(Validate.Presence);
+});
+</script>
+<% if flash[:error] %>
+  <div id="error_explanation">
+    <h2><%= post.errors.count%> prohibited this post from being saved:</h2>
+  </div>
+<% end %>
+<form action="<%= url %>" method="post" name="edit">
+<div class="post_form">
+  <p><label>Title : </label></p>
+  <input id="title" type="text" name="title" value="<%= post.title %>" />
+  <p><label>Body : </label></p>
+  <textarea name="body" id="body"><%= post.body %></textarea>
+  <p><input type="submit" value="Save" /></p>
+</div>
+</form>

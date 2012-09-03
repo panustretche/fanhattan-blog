@@ -1,0 +1,86 @@
+/* -------------------------------------------------------------------------------------
+ _____           _           _   _              
+|  ___|_ _ _ __ | |__   __ _| |_| |_ __ _ _ __  
+| |_ / _` | '_ \| '_ \ / _` | __| __/ _` | '_ \ 
+|  _| (_| | | | | | | | (_| | |_| || (_| | | | |
+|_|  \__,_|_| |_|_| |_|\__,_|\__|\__\__,_|_| |_|
+---------------------------------------------------------------------------------------- */
+/* Author: Panu Ausavasereelert */
+
+/* Reset
+---------------------------------------------------------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;}
+a{outline: none;}
+
+/* General
+---------------------------------------------------------------------------------------- */
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:#0A0A0D;margin:0;padding:0 0 0 20px;border:0;height:100%;max-height:100%;position:relative;color:#FFFFDC;}
+h1{font-family:Arial,Helvetica,sans-serif;color:#FFFFFF;text-align:left;font-size:16px;}
+ul{padding-left:10px;list-style-type:none;}
+a{color:#828170;text-decoration:none;}
+a:hover{color:#eaeaea}
+
+.left{float:left;}
+.right{float:right;}
+.clear{clear:both;}
+.row{display:block;clear:both;}
+.hidden{display:none !important;}
+.error_msg{color:red;}
+.notice_msg{color:green;}
+.LV_valid{display:none;}
+
+/* Header
+---------------------------------------------------------------------------------------- */
+#logo h1{margin:30px 0 0 0;padding:0;text-transform:lowercase;letter-spacing:-2px;font-size:40px;color:#FFFFFF;}
+#logo p{margin:-5px 0 0 0;text-transform:uppercase;font-family:Tahoma,Arial,Helvetica,sans-serif;font-weight:bold;}
+
+/* Content
+---------------------------------------------------------------------------------------- */
+#content{padding:20px 0;float:left;width:100%;}
+
+/* Footer
+---------------------------------------------------------------------------------------- */
+#footer{float:left;padding:0 0 20px 0;}
+#footer p{font-size:12px;}
+
+/* List post 
+---------------------------------------------------------------------------------------- */
+.post{margin-top:20px;width:100%;float:left;}
+.post .date{float:left;width:29px;height:32px;margin:0;margin-top:3px;margin-right:20px;padding-top:2px;text-transform:uppercase;text-align:center;font-size:10px;font-weight:bold;color:#999999;}
+.post .date b{margin:0;padding:0;display:block;margin-top:-5px;font-size:14px;color:#5C5C5C;}
+.post .title{margin:0;padding:0px 0 0 0;margin-left:10px;padding-left:10px;font-size: 20px;}
+.post .title a{color:white;text-decoration:none;}
+.post .title a:hover{color:#afafaf;}
+.post .entry{float:left;width:100%;}
+.post .entry p{margin-left:50px;}
+.post_nav{float:left;margin-top:20px;}
+
+/* Post content
+---------------------------------------------------------------------------------------- */
+.post_content h2{font-size:20px;color:#ffffff;}
+.post_content h3{font-size:17px;color:#ffffff;text-transform:uppercase;}
+.post_content h4{font-size:15px;color:#ffffff;text-transform:uppercase;}
+
+.post_content .meta{font-size:12px;}
+.post_content .entry{margin:20px 0;font-size:15px;}
+.comment_list {margin-bottom:20px;}
+.comment_list li{margin-top:10px;}
+.comment_list .commenter{color:#ffffff;}
+.comment {margin-top:10px;}
+.comment textarea{width:500px;height:100px;margin-top:5px;}
+.comment input[type="submit"]{margin-top:10px;}
+.post_content .list_all{margin:20px 0 0 0;}
+
+.post_form p{margin:10px 0 5px 0;}
+.post_form input[type="text"]{width:500px;}
+.post_form textarea{width:500px;height:100px;margin-top:5px;}
+.comment input[type="submit"]{margin-top:10px;}
+
